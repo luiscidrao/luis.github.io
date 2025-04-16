@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escolha com Sabedoria 😆</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 100px;
+      }
+      .container {
+        position: relative;
+        display: inline-block;
+      }
+      button {
+        font-size: 18px;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin: 10px;
+      }
+      #nao {
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Vamos dar uma hoje?😜 
+
+    <text-align: center;/h2>
+    <div class="container">
+      <button id="sim" onclick="aceitar()">Sim</button>
+      <button id="nao" onmouseover="fugir()">Não</button>
+    </div>
+
+    <script>
+      function aceitar() {
+        alert("Ótima escolha! 😆");
+      }
+
+      function fugir() {
+        let botaoNao = document.getElementById("nao");
+        let larguraTela = window.innerWidth;
+        let alturaTela = window.innerHeight;
+
+        let novaX = Math.random() * (larguraTela - botaoNao.offsetWidth);
+        let novaY = Math.random() * (alturaTela - botaoNao.offsetHeight);
+
+        botaoNao.style.left = novaX + "px";
+        botaoNao.style.top = novaY + "px";
+      }
+    </script>
+  </body>
+</html>
